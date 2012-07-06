@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF1ECE0F-9CCF-4167-8432-932F2B6BAD4F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Traffic_Simulation</RootNamespace>
+    <AssemblyName>Traffic Simulation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Traffic Simulation Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colors.cs" />
+    <Compile Include="Controls\MenuControls\MainMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Factories\VehicleSetData.cs" />
+    <Compile Include="Controls\ParameterControls\BoolComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ParameterControls\BoolTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ParameterControls\IParameterContainer.cs" />
+    <Compile Include="Controls\ParameterControls\EnumComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ParameterControls\ParameterTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Factories\ProductionItems\VehicleProductionItem.cs" />
+    <Compile Include="Geometrics\Beziers\Bezier.cs" />
+    <Compile Include="Geometrics\Beziers\CubicBezier.cs" />
+    <Compile Include="Geometrics\Beziers\CircularBezier.cs" />
+    <Compile Include="Geometrics\Beziers\LinearBezier.cs" />
+    <Compile Include="Geometrics\Beziers\QuadraticBezier.cs" />
+    <Compile Include="Geometrics\Geometrics.cs" />
+    <Compile Include="Geometrics\MatrixD.cs" />
+    <Compile Include="Geometrics\SizeD.cs" />
+    <Compile Include="Controls\ParameterControls\IParameterBox.cs" />
+    <Compile Include="MenuData.cs" />
+    <Compile Include="EventArgs\ParameterEventArgs.cs" />
+    <Compile Include="Controls\ParameterControls\ParameterComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ScreenData.cs" />
+    <Compile Include="Serializer.cs" />
+    <Compile Include="Controls\MenuControls\BaseMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SimulationObjects\Roads\Connection.cs" />
+    <Compile Include="Controls\ParameterControls\FloatTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ParameterControls\DoubleTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ExtendedStatusStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\NewSimulationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\ParameterControls\NumberTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ParameterPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ParameterControls\IntTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Geometrics\LineD.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Geometrics\PointD.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Randomizer.cs" />
+    <Compile Include="Simulation.cs" />
+    <Compile Include="Controls\SimulationPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\StatisticsPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SimulationObjects\Buildings\Building.cs" />
+    <Compile Include="SimulationObjects\Roads\CrossingData.cs" />
+    <Compile Include="SimulationObjects\Roads\CrossingLane.cs" />
+    <Compile Include="SimulationObjects\Roads\ILaneContainer.cs" />
+    <Compile Include="SimulationObjects\Roads\RoadConnection.cs" />
+    <Compile Include="SimulationObjects\Roads\RoadData.cs" />
+    <Compile Include="SimulationObjects\Roads\RoadDistance.cs" />
+    <Compile Include="SimulationObjects\Roads\RoadLane.cs" />
+    <Compile Include="SimulationObjects\Roads\RoadLaneIndex.cs" />
+    <Compile Include="SimulationObjects\TrafficLights\TrafficLightSystem.cs" />
+    <Compile Include="SimulationObjects\Vehicles\ModelData\MotorcycleModelData.cs" />
+    <Compile Include="SimulationObjects\Vehicles\Motorcycle.cs" />
+    <Compile Include="SimulationObjects\Vehicles\Bus.cs" />
+    <Compile Include="SimulationObjects\Vehicles\Car.cs" />
+    <Compile Include="SimulationObjects\Vehicles\ModelData\BusModelData.cs" />
+    <Compile Include="SimulationObjects\Vehicles\ModelData\VehicleModelData.cs" />
+    <Compile Include="SimulationObjects\Vehicles\ModelData\CarModelData.cs" />
+    <Compile Include="SimulationObjects\Vehicles\ModelData\TruckModelData.cs" />
+    <Compile Include="SimulationObjects\Vehicles\Truck.cs" />
+    <Compile Include="SimulationObjects\Vehicles\Vehicle.cs" />
+    <Compile Include="SimulationObjects\Roads\Crossing.cs" />
+    <Compile Include="SimulationObjects\Roads\Lane.cs" />
+    <Compile Include="SimulationObjects\Roads\Road.cs" />
+    <Compile Include="SimulationObjects\SimulationObject.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="SimulationObjects\TrafficLights\TrafficLight.cs" />
+    <Compile Include="Geometrics\VectorD.cs" />
+    <Compile Include="Factories\VehicleFactory.cs" />
+    <Compile Include="Controls\MenuControls\TaskMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EventArgs\StatusEventArgs.cs" />
+    <Compile Include="SimulationObjects\Vehicles\VehicleNext.cs" />
+    <Compile Include="TimeWatch.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Traffic Simulation Logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
